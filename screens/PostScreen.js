@@ -41,25 +41,15 @@ export default class PostScreen extends Component {
             })
     }
 
-    likeAction = () => {
-        if (this.state.is_liked) {
-            firebase
-                .database()
-                .ref("posts")
-                .child(this.props.route.params.key)
-                .child("likes")
-                .set(firebase.database.ServerValue.increment(-1));
-            this.setState({ likes: (this.state.likes -= 1), is_liked: false });
-        } else {
-            firebase
-                .database()
-                .ref("posts")
-                .child(this.props.route.params.key)
-                .child("likes")
-                .set(firebase.database.ServerValue.increment(1));
-            this.setState({ likes: (this.state.likes += 1), is_liked: true });
-        }
-    };
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     render() {
         if (!this.props.route.params.value) {
